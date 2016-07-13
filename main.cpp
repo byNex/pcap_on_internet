@@ -50,6 +50,9 @@ void callback(u_char *useless, const struct pcap_pkthdr *pkthdr,
     {
         // IP 헤더에서 데이타 정보를 출력한다.
         iph = (struct ip *)packet;
+        char track[] = "특기병";
+        char name[] = "이승현";
+        printf("[bob5][%s]pcap[%s]\n", track, name);
         printf("IP 패킷\n");
         printf("Version     : %d\n", iph->ip_v);
         printf("Header Len  : %d\n", iph->ip_hl);
